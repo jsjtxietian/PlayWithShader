@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Test1
-  m_Shader: {fileID: 4800000, guid: 05e0359150817f04eb8e6eb22dfe584f, type: 3}
+  m_Name: Test2
+  m_Shader: {fileID: 4800000, guid: 0246d5a25fe5c64469a06c24a272f178, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2502
+  m_CustomRenderQueue: 2501
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bf3940ba33142724d8f416eeb96a10bd, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -55,51 +55,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Ramp:
-        m_Texture: {fileID: 2800000, guid: a3b41b33a402ad84bb05573e82843d2d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amplitude: 0.4
-    - _AnimationSpeed: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DepthBias: 1
-    - _DepthMult: 1.56
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 2
-    - _FresnelExponent: 4
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NormalBias: 1
-    - _NormalMult: 4
     - _OcclusionStrength: 1
-    - _OutlineThickness: 0.028
     - _Parallax: 0.02
-    - _Scale: 1.78
-    - _Sharpness: 1
-    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StencilRef: 0
+    - _StencilRef: 30
     - _UVSec: 0
-    - _WaveDistance: 20.883179
-    - _WaveTrail: 3.09
     - _ZWrite: 1
-    - _upCutoff: 0.619
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _CutoffColor: {r: 0.8962264, g: 0.15641688, b: 0.15641688, a: 0}
-    - _Emission: {r: 0.7169812, g: 0.4295123, b: 0.4295123, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EvenColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelColor: {r: 0, g: 0.23127818, b: 1, a: 1}
-    - _OddColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}
-    - _WaveColor: {r: 1, g: 0, b: 0, a: 1}
-    - _topColor: {r: 0.6792453, g: 0.05446779, b: 0.05446779, a: 1}
