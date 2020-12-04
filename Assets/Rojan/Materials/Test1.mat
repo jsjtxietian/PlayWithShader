@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Test1
-  m_Shader: {fileID: 4800000, guid: 3717d4c8122274042b52c1b66787229d, type: 3}
+  m_Shader: {fileID: 4800000, guid: da19b8e653053524f94d0af240ef9c56, type: 3}
   m_ShaderKeywords: GAUSS _SAMPLES_HIGH
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bf3940ba33142724d8f416eeb96a10bd, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -64,7 +64,7 @@ Material:
     - _AnimationSpeed: 1
     - _BlurSize: 0.121
     - _BumpScale: 1
-    - _CellAmount: 4.1
+    - _CellAmount: 9.9
     - _CellSize: 0.6
     - _Cutoff: 0.5
     - _DepthBias: 1
@@ -77,7 +77,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Height: 0.111
+    - _Height: 0.8333333
     - _Metallic: 0
     - _Mode: 0
     - _NormalBias: 1
@@ -85,7 +85,7 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineThickness: 0.028
     - _Parallax: 0.02
-    - _Persistance: 0.026
+    - _Persistance: 0
     - _Roughness: 3
     - _Samples: 2
     - _Scale: 1.78
@@ -112,7 +112,7 @@ Material:
     - _FresnelColor: {r: 0, g: 0.23127818, b: 1, a: 1}
     - _OddColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}
-    - _Period: {r: 0, g: 1, b: 0, a: 0}
+    - _Period: {r: 4.03, g: 1.93, b: 1, a: 0}
     - _ScrollDirection: {r: 0, g: 1, b: 0, a: 0}
     - _WaveColor: {r: 1, g: 0, b: 0, a: 1}
     - _topColor: {r: 0.6792453, g: 0.05446779, b: 0.05446779, a: 1}
