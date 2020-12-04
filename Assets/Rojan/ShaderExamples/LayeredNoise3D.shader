@@ -1,7 +1,8 @@
-Shader "Custom/PerlinNoiseSpecial" {
+Shader "Custom/LayeredNoise3D" {
 	Properties {
-		_CellSize ("Cell Size", Range(0, 1)) = 1
-		_ScrollSpeed ("Scroll Speed", Range(0, 1)) = 1
+		_CellSize ("Cell Size", Range(0, 2)) = 2
+		_Roughness ("Roughness", Range(1, 8)) = 3
+		_Persistance ("Persistance", Range(0, 1)) = 0.4
 	}
 	SubShader {
 		Tags{ "RenderType"="Opaque" "Queue"="Geometry"}
@@ -13,8 +14,12 @@ Shader "Custom/PerlinNoiseSpecial" {
 
 		#include "CustomRandom.cginc"
 
+		//global shader variables
+		#define OCTAVES 4 
+
 		float _CellSize;
-		float _ScrollSpeed;
+		float _Roughness;
+		float _Persistance;
 
 		struct Input {
 			float3 worldPos;
@@ -63,20 +68,27 @@ Shader "Custom/PerlinNoiseSpecial" {
 			return noise;
 		}
 
+		float sampleLayeredNoise(float3 value){
+			float noise = 0;
+			float frequency = 1;
+			float factor = 1;
+
+			[unroll]
+			for(int i=0; i<OCTAVES; i++){
+				noise = noise + perlinNoise(value * frequency + i * 0.72354) * factor;
+				factor *= _Persistance;
+				frequency *= _Roughness;
+			}
+
+			return noise;
+		}
+
 		void surf (Input i, inout SurfaceOutputStandard o) {
 			float3 value = i.worldPos / _CellSize;
-			value.y += _Time.y * _ScrollSpeed;
 			//get noise and adjust it to be ~0-1 range
-			float noise = perlinNoise(value) + 0.5;
+			float noise = sampleLayeredNoise(value) + 0.5;
 
-			noise = frac(noise * 6);
-
-			float pixelNoiseChange = fwidth(noise);
-
-			float heightLine = smoothstep(1-pixelNoiseChange, 1, noise);
-			heightLine += smoothstep(pixelNoiseChange, 0, noise);
-
-			o.Albedo = heightLine;
+			o.Albedo = noise;
 		}
 		ENDCG
 	}

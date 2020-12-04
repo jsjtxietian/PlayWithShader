@@ -10,7 +10,7 @@ Shader "Custom/WhiteNoiseCells" {
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
-        #include "Random.cginc"
+        #include "CustomRandom.cginc"
 
         float3 _CellSize;
 

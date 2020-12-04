@@ -10,7 +10,7 @@ Shader "Custom/ValueNoise3D" {
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
-        #include "Random.cginc"
+        #include "CustomRandom.cginc"
 
         float _CellSize;
 

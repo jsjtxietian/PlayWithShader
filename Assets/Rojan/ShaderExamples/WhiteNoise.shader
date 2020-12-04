@@ -9,7 +9,7 @@ Shader "Custom/WhiteNoise" {
         #pragma surface surf Standard fullforwardshadows
         #pragma target 3.0
 
-        #include "Random.cginc"
+        #include "CustomRandom.cginc"
 
         struct Input {
             float3 worldPos;
